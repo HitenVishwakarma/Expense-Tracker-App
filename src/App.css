@@ -1,38 +1,104 @@
+* {
+  box-sizing: border-box;
+}
 .App {
+  position: relative;
+  color: #fff;
+  background-image: url("./Image/Expense.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.container { 
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  padding: 20px 40px;
+  /* margin-left: 50%; */
+  position: absolute;
+  left: 70%;
+  top: 20%;
+}
+
+.container h1 {
   text-align: center;
+  margin-bottom: 30px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container a {
+  text-decoration: none;
+  color: aqua;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.btn {
+  cursor: pointer;
+  width: 100%;
+  display: inline-block;
+  background-color: rgb(189, 127, 218);
+  padding: 10px;
+  border: 0;
+  border-radius: 5px;
+  font-size: medium;
+}
+
+.btn:focus {
+  outline: 0;
+}
+
+.btn:active {
+  transform: scale(.98);
+}
+
+.text {
+  margin-top: 30px;
+}
+
+.form-control {
+  position: relative;
+  margin: 20px 0 40px;
+  width: 300px;
+}
+
+.form-control input {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px #fff solid;
+  display: block;
+  width: 100%;
+  color: #fff;
+  padding: 15px 0;
+  font-size: 18px;
+}
+
+.form-control input:focus, .form-control input:valid {
+  outline: 0;
+  border-bottom: 2px steelblue solid;
+}
+
+.form-control label {
+  position: absolute;
+  top: 15px;
+  left: 0;
+}
+
+.form-control input:focus + label {
+  /* color: steelblue; */
+  transform: translateY(-30px);
+  transition: 0.25s ease-in-out;
+}
+
+.label-active {
+  transform: translateY(-30px);
+}
+
+@media (max-width: 800px) {
+  .App {
+    width: 100%;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+  .container {
+    left: 40%;
   }
 }
