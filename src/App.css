@@ -13,6 +13,12 @@
   margin: 0;
 }
 
+.Home {
+  background-color: #8209b9;
+  height: 100vh;
+  overflow: hidden;
+}
+
 .container { 
   background-color: rgba(0, 0, 0, 0.4);
   border-radius: 5px;

@@ -7,7 +7,7 @@ const App = () => {
   const [isLoggedin, setIsLoggedin] = useState(false);
 
   return (
-    <div className="App">
+    <div className={`${!isLoggedin ? "App" : "Home"}`}>
       {!isLoggedin && <Form login={setIsLoggedin} />}
       {isLoggedin && <Home />}
     </div>

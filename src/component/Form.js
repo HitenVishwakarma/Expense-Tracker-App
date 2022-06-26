@@ -4,16 +4,15 @@ import "../App.css";
 const Form = (props) => {
   const [enteredEmail, setEnteredEmail] = useState("");
   const [enteredPwd, setEnteredPwd] = useState("");
-  const [emailIsValid, setEmialIsValid] = useState();
-  const [pwdIsValid, setPwdIsValid] = useState();
   const [formIsValid, setFormIsValid] = useState();
   const [emailLabelActive, setEmailLabelActive] = useState(false);
   const [pwdLabelActive, setPwdLabelActive] = useState(false);
-  const [error, setError] = useState(false);
+  const [emailError, setEmailError] = useState(false);
+  const [pwdError, setPwdError] = useState(false);
 
   useEffect(() => {
     validateEmail();
-    // validatePwd();
+    validatePwd();
     setFormIsValid(enteredEmail.includes("@") && enteredPwd.trim().length > 6);
   }, [enteredEmail, enteredPwd]);
 
@@ -28,26 +27,24 @@ const Form = (props) => {
   };
 
   const validateEmail = () => {
-    if (enteredEmail.includes("@")) {
-      setEmialIsValid(true);
-      setError(false);
+    if (enteredEmail.includes("@gmail.com")) {
+      setEmailError(false);
     } else if (enteredEmail.length <= 0) {
       setEmailLabelActive(false);
-      setError(false);
+      setEmailError(false);
     } else {
-      setError(true);
+      setEmailError(true);
     }
   };
 
   const validatePwd = () => {
-    if (enteredPwd.trim().length > 0) {
-      setPwdIsValid(true);
-      setError(false);
+    if (enteredPwd.trim().length > 6) {
+      setPwdError(false);
     } else if (enteredPwd.length <= 0) {
       setPwdLabelActive(false);
-      setError(false);
+      setPwdError(false);
     } else {
-      setError(true);
+      setPwdError(true);
     }
   };
 
@@ -74,7 +71,7 @@ const Form = (props) => {
               value={enteredEmail}
               onChange={emailChangeHandler}
               onBlur={validateEmail}
-              style={style(error)}
+              style={style(emailError)}
               required
             />
             <label className={`${emailLabelActive ? "label-active" : ""}`}>
@@ -87,7 +84,7 @@ const Form = (props) => {
               value={enteredPwd}
               onChange={pwdChangeHandler}
               onBlur={validatePwd}
-              style={style(error)}
+              style={style(pwdError)}
               required
             />
             <label className={`${pwdLabelActive ? "label-active" : ""}`}>
