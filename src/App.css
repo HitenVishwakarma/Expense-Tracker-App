@@ -8,15 +8,19 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  height: 100vh;
+  height: 100%;
   overflow: hidden;
   margin: 0;
 }
 
 .Home {
-  background-color: #8209b9;
-  height: 100vh;
-  overflow: hidden;
+  /* background-color: #8209b9;*/
+  background-image: url("./Image/expense2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100%;
+  /* overflow: hidden; */
 }
 
 .container { 

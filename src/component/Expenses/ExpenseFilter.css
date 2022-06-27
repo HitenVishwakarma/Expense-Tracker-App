@@ -1,0 +1,25 @@
+.ExpenseFilter-container {
+    color: white;
+    padding: 0 1rem;
+}
+
+.ExpenseFilter-control {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 1rem 0;
+}
+
+.ExpenseFilter-control label {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.ExpenseFilter-control select {
+    font: inherit;
+    padding: 0.5rem 3rem;
+    font-weight: bold;
+    border-radius: 6px;
+}    

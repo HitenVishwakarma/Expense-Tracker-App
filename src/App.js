@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.css";
-import Form from "./component/Form";
-import { Home } from "./component/Home";
+import Form from "./component/UI/Form";
+import { Home } from "./component/UI/Home";
 
 const App = () => {
   const [isLoggedin, setIsLoggedin] = useState(false);
