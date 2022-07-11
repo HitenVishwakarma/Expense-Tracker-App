@@ -1,3 +1,4 @@
+import { AddExpense } from "../Expenses/AddExpense";
 import { ExpenseFilter } from "../Expenses/ExpenseFilter";
 import { ExpenseItem } from "../Expenses/ExpenseItem";
 import "./Home.css";
@@ -22,10 +23,19 @@ export const Home = () => {
       amount: 4300,
       date: new Date(2023, 5, 24),
     },
+    {
+      id: 4,
+      title: "New Gate",
+      amount: 2300,
+      date: new Date(2023, 4, 24),
+    },
   ];
   return (
     <div>
       <h1>Expense Tracker App !</h1>
+      <div className="addexpense-container">
+        <AddExpense />
+      </div>
       <div className="main-container">
         <div>
           <ExpenseFilter />

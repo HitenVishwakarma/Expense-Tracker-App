@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "../../App.css";
+import "./Form.css";
 
 const Form = (props) => {
   const [enteredEmail, setEnteredEmail] = useState("");
@@ -61,8 +61,8 @@ const Form = (props) => {
     props.login(true);
   };
   return (
-    <div className="App">
-      <div className="container">
+    <div>
+      <div className="form-control-container">
         <h1>Please login</h1>
         <form onSubmit={formSubmitHandler}>
           <div className="form-control">

@@ -4,10 +4,10 @@ import Form from "./component/UI/Form";
 import { Home } from "./component/UI/Home";
 
 const App = () => {
-  const [isLoggedin, setIsLoggedin] = useState(false);
+  const [isLoggedin, setIsLoggedin] = useState(true);
 
   return (
-    <div className={`${!isLoggedin ? "App" : "Home"}`}>
+    <div className={!isLoggedin ? "App" : "Home"}>
       {!isLoggedin && <Form login={setIsLoggedin} />}
       {isLoggedin && <Home />}
     </div>

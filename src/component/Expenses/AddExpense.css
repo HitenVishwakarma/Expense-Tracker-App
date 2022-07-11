@@ -1,0 +1,55 @@
+.add-expense_controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.add-expense_control label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.add-expense_control input {
+    font: inherit;
+    padding: 0.6rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 20rem;
+    max-width: 100%;
+
+}
+
+.add-expense_actions {
+    text-align: right;
+}
+
+.add-expense_actions button {
+    font: inherit;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    border: 1px solid #40005d;
+    background: #40005d;
+    color: white;
+    border-radius: 12px;
+    margin-right: 1rem;
+}
+
+.add-expense_actions button:hover,
+.add-expense_actions button:active {
+    background-color: #510674;
+    border-radius: #510674;
+}
+
+/* .add-expense_actions button.alternative {
+    color: #220131;
+    border-color: transparent;
+    background-color: transparent;
+  }
+  
+  .add-expense_actions button.alternative:hover,
+  .add-expense_actions button.alternative:active {
+    background-color: #ddb3f8;
+  } */
